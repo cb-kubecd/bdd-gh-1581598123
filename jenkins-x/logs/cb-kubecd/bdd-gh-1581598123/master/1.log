@@ -1,0 +1,377 @@
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mgbwt[0m
+{"level":"warn","ts":1581598281.7225013,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581598281.7230332,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-79q48[0m
+{"level":"warn","ts":1581598282.7935467,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581598282.79505,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-gh-1581598123-mas-r4b9w-drpfx[0m
+{"level":"warn","ts":1581598376.2737675,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581598377.3207977,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-gh-1581598123.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8c985561fa137876cd49d8da572c0b5272222214
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/bdd-gh-1581598123 main.go
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/bdd-gh-1581598123"]            
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2020/02/13 12:53:15 pushed blob: sha256:3f2c3b0ff5189f26cd2542588d54244af24dc5065b6cb517c5f8fb5ed2cc08ce
+2020/02/13 12:53:16 pushed blob: sha256:38667b3cec697d30d7bbe6cdfdf94fdb733f2b3a8a07c11e9b303843a6389678
+2020/02/13 12:53:17 gcr.io/jenkins-x-bdd3/bdd-gh-1581598123:0.0.1: digest: sha256:e2490b42b4671d575b9dc7e4f8a115d5647daa54560487d2d10a8f77487e4583 size: 428
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/bdd-gh-1581598123 to an unshallow repository
+Generating change log from git ref b3ea07705499b29362359315a508c3a473a1c150 => 6a52eff2cf0e4b0e312ab77ee1fc2bdb2236ba2d
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8c985561fa137876cd49d8da572c0b5272222214 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8c985561fa137876cd49d8da572c0b5272222214 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for cb-kubecd/bdd-gh-1581598123 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/bdd-gh-1581598123/releases/tag/v0.0.1
+generated: /workspace/source/charts/bdd-gh-1581598123/templates/release.yaml
+Created Release bdd-gh-1581598123-0-0-1 resource in namespace **
+Updating PipelineActivity cb-kubecd-bdd-gh-1581598123-master-1 with version 0.0.1
+Updated PipelineActivities cb-kubecd-bdd-gh-1581598123-master-1 with release notes URL: https://github.com/cb-kubecd/bdd-gh-1581598123/releases/tag/v0.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file bdd-gh-1581598123-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1581598123-mas-r4b9w-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app bdd-gh-1581598123 version 0.0.1 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3
+WARNING: Failed to merge the Pull Request https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3 due to PUT https://api.github.com/repos/cb-kubecd/environment-pr-158-6-boot-gke-staging/pulls/3/merge: 405 Pull Request is not mergeable [] maybe I don't have karma?
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+Rebasing PullRequest due to conflict
+WARNING: 
+error: Timed out waiting for pull request https://github.com/cb-kubecd/environment-pr-158-6-boot-gke-staging/pull/3 to merge. Waited 1h0m0s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
